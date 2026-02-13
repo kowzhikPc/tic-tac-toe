@@ -12,6 +12,7 @@ c1=0
 c2=0
 c3=0
 l = ["a1","a2","a3","b1","b2","b3","c1","c2","c3"]
+print("Hello Gamers!")
 def board_logic():
     print(Fore.LIGHTRED_EX +Style.BRIGHT+ "  1    2    3")
     global board
