@@ -16,7 +16,7 @@ c3=0
 l = ["a1","a2","a3","b1","b2","b3","c1","c2","c3"]
 print(Fore.LIGHTBLUE_EX+Style.BRIGHT+"Hello Gamers!\n")
 def exit_logic():   
-    print("\n-->Game Restart!")
+    print("\n-->Game Restart!") 
     time.sleep(2)
     sys.exit(0)
 
