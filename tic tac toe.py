@@ -31,6 +31,137 @@ def board_logic():
 print(board_logic())
 all_inputs = []
 
+def win_logic():
+    if board["a1"] == "x " and board["a2"] == "x " and board["a3"] == "x ":
+        print("hello")
+        i = 3
+        while i > 0:
+            print(f"Game ends in {i}")
+            i -=1
+            time.sleep(0.97)
+        sys.exit(0)
+    elif board["b1"] == "x " and board["b2"] == "x " and board["b3"] == "x ":
+        print("won")
+        i = 3
+        while i > 0:
+            print(f"Game ends in {i}")
+            i -=1
+            time.sleep(0.97)
+        sys.exit(0)
+    elif board["c1"] == "x " and board["c2"] == "x " and board["c3"] == "x ":
+        print("won")
+        i = 3
+        while i > 0:
+            print(f"Game ends in {i}")
+            i -=1
+            time.sleep(0.97)
+        sys.exit(0)
+    elif board["a1"] == "x " and board["b1"] == "x " and board["c1"] == "x ":
+        print("won")
+        i = 3
+        while i > 0:
+            print(f"Game ends in {i}")
+            i -=1
+            time.sleep(0.97)
+        sys.exit(0)
+    elif board["a2"] == "x " and board["b2"] == "x " and board["c2"] == "x ":
+        print("won")
+        i = 3
+        while i > 0:
+            print(f"Game ends in {i}")
+            i -=1
+            time.sleep(0.97)
+        sys.exit(0)
+    elif board["a3"] == "x " and board["b3"] == "x " and board["c3"] == "x ":
+        print("won")
+        i = 3
+        while i > 0:
+            print(f"Game ends in {i}")
+            i -=1
+            time.sleep(0.97)
+        sys.exit(0)
+    elif board["a1"] == "x " and board["b2"] == "x " and board["c3"] == "x ":
+        print("won")
+        i = 3
+        while i > 0:
+            print(f"Game ends in {i}")
+            i -=1
+            time.sleep(0.97)
+        sys.exit(0)
+    elif board["a3"] == "x " and board["b2"] == "x " and board["c1"] == "x ":
+        print("won")
+        i = 3
+        while i > 0:
+            print(f"Game ends in {i}")
+            i -=1
+            time.sleep(0.97)
+        sys.exit(0)
+    elif board["a1"] == "x " and board["a2"] == "x " and board["a3"] == "o ":
+        print("hello")
+        i = 3
+        while i > 0:
+            print(f"Game ends in {i}")
+            i -=1
+            time.sleep(0.97)
+        sys.exit(0)
+    elif board["b1"] == "x " and board["b2"] == "x " and board["b3"] == "o ":
+        print("won")
+        i = 3
+        while i > 0:
+            print(f"Game ends in {i}")
+            i -=1
+            time.sleep(0.97)
+        sys.exit(0)
+    elif board["c1"] == "x " and board["c2"] == "x " and board["c3"] == "o ":
+        print("won")
+        i = 3
+        while i > 0:
+            print(f"Game ends in {i}")
+            i -=1
+            time.sleep(0.97)
+        sys.exit(0)
+    elif board["a1"] == "x " and board["b1"] == "x " and board["c1"] == "o ":
+        print("won")
+        i = 3
+        while i > 0:
+            print(f"Game ends in {i}")
+            i -=1
+            time.sleep(0.97)
+        sys.exit(0)
+    elif board["a2"] == "x " and board["b2"] == "x " and board["c2"] == "o ":
+        print("won")
+        i = 3
+        while i > 0:
+            print(f"Game ends in {i}")
+            i -=1
+            time.sleep(0.97)
+        sys.exit(0)
+    elif board["a3"] == "x " and board["b3"] == "x " and board["c3"] == "o ":
+        print("won")
+        i = 3
+        while i > 0:
+            print(f"Game ends in {i}")
+            i -=1
+            time.sleep(0.97)
+        sys.exit(0)
+    elif board["a1"] == "x " and board["b2"] == "x " and board["c3"] == "o ":
+        print("won")
+        i = 3
+        while i > 0:
+            print(f"Game ends in {i}")
+            i -=1
+            time.sleep(0.97)
+        sys.exit(0)
+    elif board["a3"] == "x " and board["b2"] == "x " and board["c1"] == "o ":
+        print("won")
+        i = 3
+        while i > 0:
+            print(f"Game ends in {i}")
+            i -=1
+            time.sleep(0.97)
+        sys.exit(0)
+
+
 userinput_x= input("Enter where to change:")
 all_inputs.append(userinput_x)
 
@@ -38,6 +169,7 @@ if userinput_x in l:
     board[str(userinput_x)]="x "
     board_map= f" {board["a1"]}  | {board["a2"]} | {board["a3"]} \n\n {board["b1"]}  | {board["b2"]} | {board["b3"]} \n\n {board["c1"]}  | {board["c2"]} | {board["c3"]} "
     print(board_map)
+    win_logic()
 else:
     print(Fore.LIGHTRED_EX+"\nInvalid Dimensions!")
     exit_logic()
@@ -50,6 +182,7 @@ if userinput_o != userinput_x:
         board[str(userinput_o)] = "o "
         board_map= f" {board["a1"]}  | {board["a2"]} | {board["a3"]} \n\n {board["b1"]}  | {board["b2"]} | {board["b3"]} \n\n {board["c1"]}  | {board["c2"]} | {board["c3"]} "
         print(board_map)
+        win_logic()
     else:
         print("Invalid Dimensions!\n")
         exit_logic()
@@ -64,6 +197,7 @@ if userinput_x_2 != userinput_x and userinput_o:
     board[str(userinput_x_2)] = "x "
     board_map= f" {board["a1"]}  | {board["a2"]} | {board["a3"]} \n\n {board["b1"]}  | {board["b2"]} | {board["b3"]} \n\n {board["c1"]}  | {board["c2"]} | {board["c3"]} "
     print(board_map)
+    win_logic()
 
 else:
     print("Invalid Dimensions")
@@ -77,6 +211,7 @@ if userinput_o_2 not in all_inputs:
     board[str(userinput_o_2)] = "o "
     board_map= f" {board["a1"]}  | {board["a2"]} | {board["a3"]} \n\n {board["b1"]}  | {board["b2"]} | {board["b3"]} \n\n {board["c1"]}  | {board["c2"]} | {board["c3"]} "
     print(board_map)
+    win_logic()
 else:
     print("invalid dimensions")
     exit_logic()
@@ -87,6 +222,7 @@ if userinput_x_3 not in all_inputs:
     board[str(userinput_x_3)] = "x "
     board_map= f" {board["a1"]}  | {board["a2"]} | {board["a3"]} \n\n {board["b1"]}  | {board["b2"]} | {board["b3"]} \n\n {board["c1"]}  | {board["c2"]} | {board["c3"]} "
     print(board_map)
+    win_logic()
 else:
     print("invalid Dimensions")
     exit_logic()
@@ -97,6 +233,7 @@ if userinput_o_3 not in all_inputs:
     board[str(userinput_o_3)] = "o "
     board_map= f" {board["a1"]}  | {board["a2"]} | {board["a3"]} \n\n {board["b1"]}  | {board["b2"]} | {board["b3"]} \n\n {board["c1"]}  | {board["c2"]} | {board["c3"]} "
     print(board_map)
+    win_logic()
 else:
     print("invalid dimensions")
     exit_logic()
@@ -108,6 +245,7 @@ if userinput_x_4 not in all_inputs:
     board[str(userinput_x_4)] = "x "
     board_map= f" {board["a1"]}  | {board["a2"]} | {board["a3"]} \n\n {board["b1"]}  | {board["b2"]} | {board["b3"]} \n\n {board["c1"]}  | {board["c2"]} | {board["c3"]} "
     print(board_map)
+    win_logic()
 else:
     print("invalid dimensions")
     exit_logic()
@@ -119,6 +257,7 @@ if userinput_o_4 not in all_inputs:
     board[str(userinput_o_4)] = "o "
     board_map= f" {board["a1"]}  | {board["a2"]} | {board["a3"]} \n\n {board["b1"]}  | {board["b2"]} | {board["b3"]} \n\n {board["c1"]}  | {board["c2"]} | {board["c3"]} "
     print(board_map)
+    win_logic()
 else:
     print("invalid dimensions")
     exit_logic()
@@ -130,6 +269,7 @@ if userinput_x_5 not in all_inputs:
     board[str(userinput_x_5)] = "x "
     board_map= f" {board["a1"]}  | {board["a2"]} | {board["a3"]} \n\n {board["b1"]}  | {board["b2"]} | {board["b3"]} \n\n {board["c1"]}  | {board["c2"]} | {board["c3"]} "
     print(board_map)
+    win_logic()
 else:
     print("invalid dimensions")
     exit_logic()
